@@ -2,3 +2,22 @@
 <!-- HTML for the front end -->
 
 <!-- Just looking to bring in the data from our database -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--To bring in the data from the backend, a good ole for loop-->
+
+    <% for (let i = 0; i < habits.length; i++){ %>
+        <p><%=habits[i].title%></p>
+        <p><%=habits[i].number%></p>
+        <p><%=habits[i].category%></p>
+
+    <%}%>
+</body>
+</html>

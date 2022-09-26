@@ -14,6 +14,9 @@ const Habit = require("./models/habit")
 // The middleware of choice is ejs
 // npm install ejs
 
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs")
+
 
 
 
@@ -37,9 +40,14 @@ connection.once("open", () => {
 
 
 //Time to make the model that will be loaded
+
+
+
+//Add a few items in the database
+
 const item = new Habit({
-    title: "running",
-    number: "20",
+    title: "Jump Rope",
+    number: "35",
     category: "Fitness"
 })
 item.save().then(item => {
@@ -56,6 +64,7 @@ app.get("/habit", async(req, res) => {
     const habits = await Habit.find({})
     res.render("home.ejs", {habits})
 })
+
 
 
 app.listen(5500, () => {
