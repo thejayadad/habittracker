@@ -26,9 +26,9 @@ connection.once('open', () => {
 })
 
 const item = new Habit({
-    title: "running",
-    number: "20",
-    category: "Fitness"
+    title: "water",
+    number: "1",
+    category: "Nutrition"
 })
 item.save().then(item => {
     console.log(item)
