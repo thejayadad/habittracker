@@ -17,6 +17,14 @@ const Habit = require("./models/habit")
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs")
 
+//Add in css
+
+
+
+app.use(express.static("public"))
+
+
+
 
 
 
