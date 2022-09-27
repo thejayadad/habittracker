@@ -8,7 +8,7 @@ body {
     font-family: cursive;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: 30vh 1fr auto;
+    grid-template-rows: auto 1fr auto;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -23,6 +23,42 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    border-bottom: 4px solid #9e7c0c;
+    border-bottom: 2px solid #9e7c0c;
     cursor: pointer;
+}
+main {
+    grid-column:  1 / 3;
+    grid-row: 2 / 3;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* styling the footer section */
+
+footer {
+    grid-column:  1 / 3;
+    grid-row: 3 / 4;
+    width: 100%;
+    background-color: #241773;
+    color: #9e7c0c;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #9e7c0c;
+    padding: 10px;
+}
+
+.link a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9e7c0c;
+    text-decoration: none;
+    font-size: 10px;
 }
