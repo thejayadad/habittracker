@@ -19,10 +19,7 @@ app.set("view engine", "ejs")
 
 //Add in css
 
-
-
 app.use(express.static("public"))
-
 
 
 
